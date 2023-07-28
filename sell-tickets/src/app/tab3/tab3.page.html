@@ -1,0 +1,107 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      SORTEO
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false"> 
+  <div class="container">
+
+
+    <ion-card>
+      <img alt="Silhouette of mountains" src="assets\cenaimg.jpg" />
+      <ion-card-header>
+        <ion-card-subtitle>Para dos personas</ion-card-subtitle>
+        <ion-card-title>UNA CENA</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+     
+        <p>
+          ¡Gran oportunidad para disfrutar de una cena valorada en 5000 pesos!
+        </p>
+        <br>
+        <p >
+          ¿Quieres deleitarte con una experiencia culinaria única? ¡No busques más! Estamos emocionados 
+          de anunciar que estamos rifando una cena espectacular valorada en 5000 pesos 💰 para ti y un acompañante.
+          <a (click)="openBases()">Ver más detalles.</a>
+        </p>
+       
+    <br>
+    ¡El ganador se anunciará el próximo! 
+    <div class="count-down-timer">
+      <p>{{ currentTime }}</p>
+      <div class="wrapper">
+        <div class="description">
+          <p>Dias</p>
+          <p>Horas</p>
+          <p>Minutos</p>
+          <p>Segundos</p>
+        </div>
+        <div class="times">
+          <p #days></p>
+          <p #hours></p>
+          <p #minutes></p>
+          <p #seconds></p>
+        </div>
+
+         
+      </div>
+     
+      </div>
+    
+     </ion-card-content>
+    </ion-card>
+
+
+
+
+  
+</div>
+
+<ion-modal [isOpen]="isModalOpen">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>BASES DEL CONCURSO</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="closeBases()">Cerrar</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+
+      <div class=" ion-text-justify">
+      <ion-card>
+        <ion-card-header>
+          <!-- <ion-card-title>Bases del concurso</ion-card-title> -->
+        </ion-card-header>
+      
+        <ion-card-content>
+  
+         <p >
+          El ganador será elegido mediante el sorteo de la noche de la Lotería Nacional Dominicana, que se llevará a cabo el 5 de Agosto de 2023.
+
+         </p>
+         <br>
+         <p>
+          Todo el dinero recaudado en esta rifa será destinado a Hogar Villa Bendición, una fundación ofrece hogar, educación, alimentación y una familia a más de 100 niños abandonados por sus padres.
+         
+         </p>
+          <br>
+          <p>
+            ¡No pierdas la oportunidad de participar y ayudar a una buena causa! Si deseas inscribirte en la rifa, contáctanos vía WhatsApp al número: 📱 <a href="tel:8492074952">(849-207-4952)</a>.
+          
+          </p>
+              
+ </ion-card-content>
+      </ion-card>
+   
+    </div>
+    </ion-content>
+
+  </ng-template>
+</ion-modal>
+</ion-content>
